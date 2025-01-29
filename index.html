@@ -9,29 +9,79 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            text-align: center;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
         }
         h1 {
             color: #007BFF;
         }
-        p {
-            font-size: 18px;
+        .nav-bar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-bar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-bar a:hover {
+            color: #007BFF;
         }
         .content {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            width: 60%;
-            margin: auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .logo {
+            font-size: 50px;
+            color: #007BFF;
+            font-weight: bold;
+            animation: runLogo 5s infinite linear;
+        }
+        @keyframes runLogo {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content img {
+            width: 200px;
+            border-radius: 50%;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
     <div class="content">
-        <h1>Welcome to ABD the Pro!</h1>
-        <p>This is a simple website created to showcase the power of HTML.</p>
+        <div class="logo">ABD the Pro</div>
+        <p>This is a simple website with a moving logo! Check it out.</p>
+        <img src="https://via.placeholder.com/200" alt="Profile Picture">
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 ABD the Pro. All Rights Reserved.</p>
     </div>
 </body>
 </html>
